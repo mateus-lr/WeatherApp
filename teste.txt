@@ -1,0 +1,34 @@
+  <!-- <div class="container">
+    <div class="form">
+      <h3>Confira o clima</h3>
+      <div class="form-input-container">
+        <input type="text" placeholder="Digite o nome da cidade" id="city-input">
+        <button id="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="weather-data">
+      <h2>
+        <i class="fa-solid fa-location-dot"></i>
+        <span id="city">Maceió</span>
+        <img src="https://countryflagsapi.com/png/br" alt="bandeira do pais" id="country">
+      </h2>
+      <p id="temperature"><span>38</span>&deg;C</p>
+      <div id="description-container">
+        <p id="description">Nublado</p>
+        <img src="http://openweathermap.org/img/wn/01d.png" alt="condições do tempo" id="weather-icon">
+      </div>
+      <div id="details-container">
+        <p id="humidity">
+          <i class="fa-solid fa-droplet"></i>
+          <span>48%</span>
+        </p>
+        <p id="wind">
+          <i class="fa-solid fa-wind"></i>
+          <span>4km/h</span>
+        </p>
+      </div>
+    </div>
+  </div> -->
