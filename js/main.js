@@ -10,8 +10,7 @@ const showInfoElement = document.querySelector("#info-container");
 
 const cityElement = document.querySelector("#city");
 const tempElement = document.querySelector("#temperature span");
-const minElement = document.querySelector("#weather-min span");
-const maxElement = document.querySelector("#weather-max span");
+const windElement = document.querySelector("#wind span");
 const descElement = document.querySelector("#description");
 const weatherIconElement = document.querySelector("#weather-icon");
 const humidityElement = document.querySelector("#humidity span");
@@ -39,8 +38,7 @@ const showWeatherData = async (city) => {
   descElement.innerText = data.weather[0].description;
   weatherIconElement.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
   humidityElement.innerText = `${data.main.humidity}%`;
-  minElement.innerText = parseInt(data.main.temp_min);
-  maxElement.innerText = parseInt(data.main.temp_max);
+  windElement.innerText = `${data.wind.speed} km/h`;
   today.innerText = day;
 }
 
@@ -53,7 +51,7 @@ const hideInfo = () => {
 };
 
 const eraseInput = () => {
-cityInput.value = "";
+  cityInput.value = "";
 };
 
 // Events
@@ -81,13 +79,12 @@ window.addEventListener("keydown", (e) => {
     showWeatherData(city);
     showInfo();
   }
-  
 });
 
-cityInput.addEventListener("keydown", function(e) {
+cityInput.addEventListener("keydown", function (e) {
   var keyCode = (e.keyCode ? e.keyCode : e.which);
 
-if (keyCode > 47 && keyCode < 58) {
-  e.preventDefault();
-}
+  if (keyCode > 47 && keyCode < 58) {
+    e.preventDefault();
+  }
 });

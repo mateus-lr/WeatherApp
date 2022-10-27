@@ -5,16 +5,16 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background: var(--gradient);
+  width: 100vw;  
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .hide {
@@ -27,8 +27,12 @@ img {
 }
 
 .container {
-  background-color: rgb(255, 166, 0);
-  box-shadow: 0px 3px 8px rgba(0,0,0.24);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--c3);
+  background-image: var(--gradient);
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.2);
   padding: 0.8rem;
   color: var(--c2);
   border-radius: 1rem;
@@ -45,14 +49,14 @@ img {
 
 .form input {
   padding: .8rem;
-  border: solid 1px #ccc;
+  border: solid 1px var(--c4);
   flex: 1;
   border-radius: 4px;
-  background-color: rgb(231, 231, 231);
+  background-color: var(--c7);
 }
 
 .form button {
-  padding:.8rem;
+  padding: .8rem;
   min-width: 5px;
   margin-left: 8px;
   background-color: var(--c5);
@@ -62,12 +66,16 @@ img {
   border-radius: 4px
 }
 
+.form button:hover {
+  background-color: var(--c6);
+}
+
 /* weather  */
 #weather-data {
   display: flex;
   flex-direction: column;
   align-items: star;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--c8);
   margin-top: 1.5rem;
   padding-top: 1rem;
 }
@@ -80,24 +88,24 @@ img {
 
 #weather-data h3 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.6rem;
 }
 
 #temperature {
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.8rem;
   margin-bottom: 1rem;
 }
 
-#weather-min-max {
+#weather-wind-humidity {
   display: flex;
   gap: 1rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
-#weather-min-max p {
+#weather-wind-humidity p {
   font-size: 0.8rem;
 }
 
@@ -106,9 +114,16 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #weather-conditions p {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 300;
+  margin-bottom: 1.5em;
 }
