@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#FBAB7E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Fonts Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Clima Agora</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="form-input-container">
+        <input autofocus type="text" placeholder="Digite o nome da cidade" id="city-input">
+        <button id="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </div>
+    <div id="info-container" class="hide">
+      <div id="weather-data">
+        <h2 id="today"><span><span></h2>
+        <h3>
+          <span id="city"></span>
+        </h3>
+        <p id="temperature"><span></span>&deg;C</p>
+        <div id="weather-wind-humidity">
+          <p id="wind">
+            <i class="fa-solid fa-wind"></i>
+            <span></span>
+          </p>
+          <p id="humidity">
+            <i class="fa-solid fa-droplet"></i>
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+      <div id="weather-conditions">
+        <img src="" id="weather-icon">
+        <p id="description">Nublado</p>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/api.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
